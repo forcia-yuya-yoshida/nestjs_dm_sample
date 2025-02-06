@@ -1,6 +1,6 @@
-import { Module, DynamicModule } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { DynamicModule, Module } from '@nestjs/common/index';
 import { MainModule } from './modules/main.module';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 async function getDynamicImports(
   coop: string | undefined,
