@@ -8,4 +8,9 @@ export class CompanyBController {
   getHello(): string {
     return 'i am company B';
   }
+
+  @Get('/wowow')
+  getCompanyA(): string {
+    return 'wowow';
+  }
 }
