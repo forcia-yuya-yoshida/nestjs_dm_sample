@@ -5,9 +5,17 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 async function getDynamicImports(
   coop: string | undefined,
 ): Promise<DynamicModule[]> {
-  if (coop === 'fca') {
-    const { FCAModule } = await import('./modules/coop/fca/fca.module');
-    return [FCAModule.register()];
+  if (coop === 'A') {
+    const { CompanyAModule } = await import(
+      './modules/coop/company-a/company-a.module'
+    );
+    return [CompanyAModule.register()];
+  }
+  if (coop === 'B') {
+    const { CompanyBModule } = await import(
+      './modules/coop/company-b/company-b.module'
+    );
+    return [CompanyBModule.register()];
   }
   return [];
 }

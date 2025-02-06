@@ -1,13 +1,13 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { FCAController } from './fca.controller';
+import { CompanyAController } from './company-a.controller';
 
 @Module({})
-export class FCAModule {
+export class CompanyAModule {
   static register(): DynamicModule {
     return {
-      module: FCAModule,
+      module: CompanyAModule,
       imports: [],
-      controllers: [FCAController],
+      controllers: [CompanyAController],
       providers: [],
     };
   }
